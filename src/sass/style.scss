@@ -1,0 +1,223 @@
+@import "./variables.scss";
+@import "./journey-1.scss";
+@import "./journey-2.scss";
+@import "./sign-up.scss";
+@import "./sign-in.scss";
+
+@font-face {
+  font-family: tajwal;
+  src: url(../assets/fonts/Tajawal-Regular.ttf);
+}
+.container {
+  font-family: tajwal, sans-serif;
+}
+
+.navbar {
+  margin: 5px 0;
+  .navbar-brand {
+    @include title;
+    background-color: $main-color;
+    color: white;
+    padding: 0px 5px;
+    width: 110px;
+    height: 35px;
+    border: 1px solid $main-color;
+    border-radius: 5px;
+    transition: all 0.5s ease;
+    img {
+      width: 30%;
+      filter: invert(100%);
+    }
+    &:hover {
+      background-color: $darken-main-color;
+      color: white;
+    }
+  }
+  .navbar-nav {
+    .nav-link {
+      font-size: 20px;
+      font-weight: bold;
+      &.active {
+        color: $main-color;
+      }
+    }
+  }
+  .custom-btn {
+    background-color: $main-color;
+    color: white;
+    width: 130px;
+    transition: all 0.5s ease;
+    &:not(:last-child) {
+      margin-left: 10px;
+    }
+    &:hover {
+      background: $darken-main-color;
+      color: white;
+    }
+  }
+}
+.header-title{
+  width: 100%;
+  
+  color: white;
+  background: linear-gradient(to top, $darken-main-color, $main-color);
+  padding: 15px;
+  margin: 20px 0;
+  border-radius: 5px;
+  text-align: center;
+  
+  h1 {
+    @include title;
+   
+  }
+}
+.header-details{
+  padding: 15px;
+  margin: 20px 0;
+  border: 1px solid $main-color;
+  
+  border-radius: 5px;
+  p {
+    @include paragragh;
+    font-weight: 600;
+    color: $main-color;
+    line-height: 30px;
+  }
+}
+.services {
+  &-title {
+    margin: 30px;
+    h1 {
+      @include title;
+      color: $main-color;
+    }
+  }
+  &-types {
+    .service-card {
+      border: 1px solid rgba($main-color, 0.5);
+      height: 180px;
+      padding: 10px;
+      margin-bottom: 20px;
+      border-radius: 5px;
+      &-icon {
+        text-align: center;
+        margin-bottom: 10px;
+        svg {
+          color: $main-color;
+          font-size: 22px;
+        }
+      }
+      &-description {
+        h2 {
+          @include title;
+          color: $main-color;
+        }
+        p {
+          @include paragragh;
+        }
+      }
+    }
+  }
+}
+.journeys {
+  &-title {
+    margin: 30px;
+    h1 {
+      @include title;
+      color: $main-color;
+    }
+  }
+  &-description {
+    .card {
+      border: 1px solid $main-color !important;
+      &-title {
+        @include title;
+        color: $main-color;
+      }
+      &-text {
+        @include paragragh;
+      }
+      .custom-btn {
+        background-color: $main-color;
+        color: white;
+        margin-left: 10px;
+        width: 130px;
+        transition: all 0.5s ease;
+        &:hover {
+          background: $darken-main-color;
+          color: white;
+        }
+      }
+    }
+  }
+}
+.contact-us {
+  &-title {
+    margin: 30px;
+    h1 {
+      @include title;
+      color: $main-color;
+    }
+  }
+  &-info {
+    ul li {
+      list-style: none;
+      padding: 10px 0;
+      svg {
+        color: $main-color;
+        margin-left: 10px;
+      }
+      span {
+        @include paragragh;
+      }
+    }
+    .map {
+      iframe {
+        width: 100%;
+        border: 1px solid $main-color;
+        border-radius: 5px;
+      }
+    }
+  }
+}
+.footer {
+  .copy-rights {
+    background-color: $main-color;
+    border-radius: 5px;
+    text-align: center;
+    padding: 20px 0;
+
+    p {
+      color: white;
+      font-size: 18px;
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  #navbarNav {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+@media (max-width: 992px) {
+  .services-types {
+    .service-card {
+      &-description {
+        h2 {
+          font-size: 18px;
+        }
+        p {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 767px) {
+  .journeys-description {
+    .card {
+      margin-bottom: 20px;
+    }
+  }
+}
