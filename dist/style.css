@@ -263,6 +263,38 @@
   background-color: #6594c5;
 }
 
+.sign .form-border {
+  border: 1px solid rgb(180, 78, 157);
+  border-radius: 5px;
+  padding: 0;
+}
+.sign .form-border input[type=email]::placeholder {
+  text-align: right;
+}
+.sign .form-border label {
+  color: rgb(180, 78, 157);
+  font-weight: bold;
+}
+.sign .form-border #error-message {
+  color: red;
+}
+.sign .form-border .form-header,
+.sign .form-border .form-footer {
+  height: 20px;
+  background-color: rgb(180, 78, 157);
+}
+.sign .form-border a {
+  text-decoration: none !important;
+}
+.sign .form-border a p {
+  color: rgb(180, 78, 157);
+  font-weight: bold;
+  transition: all 0.5s ease;
+}
+.sign .form-border a p:hover {
+  color: #6e2e5f;
+}
+
 @font-face {
   font-family: tajwal;
   src: url(./fonts/Tajawal-Regular.ttf);
@@ -302,18 +334,19 @@
 .navbar .navbar-nav .nav-link.active {
   color: rgb(180, 78, 157);
 }
-.navbar .custom-btn {
-  background-color: rgb(180, 78, 157);
-  color: white;
-  width: 130px;
-  transition: all 0.5s ease;
+
+.custom-btn {
+  background-color: rgb(180, 78, 157) !important;
+  color: white !important;
+  width: 130px !important;
+  transition: all 0.5s ease !important;
 }
-.navbar .custom-btn:not(:last-child) {
-  margin-left: 10px;
+.custom-btn:not(:last-child) {
+  margin-left: 10px !important;
 }
-.navbar .custom-btn:hover {
-  background: #6e2e5f;
-  color: white;
+.custom-btn:hover {
+  background: #6e2e5f !important;
+  color: white !important;
 }
 
 .header-title {
