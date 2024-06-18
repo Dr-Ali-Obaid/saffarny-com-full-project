@@ -6,3 +6,5 @@ import "bootstrap/dist/js/bootstrap.min.js";
 import $ from "jquery";
 
 document.getElementById("date").innerHTML = new Date().getFullYear();
+
+

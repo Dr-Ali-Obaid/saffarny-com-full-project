@@ -1,120 +1,11 @@
 /*!**************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/sass/style.scss ***!
   \**************************************************************************************************************/
-.header-cairo .header-info {
-  background-image: url(./images/journey-cairo.jpg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 500px;
-  position: relative;
-  border: 1px solid rgb(82, 82, 15);
-  border-radius: 5px;
-}
-.header-cairo .header-info .overlay {
-  background-color: rgb(82, 82, 15);
-  opacity: 0.7;
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-.header-cairo .header-info .overlay h1 {
-  font-size: 22px;
-  font-weight: bold;
-  text-align: center;
-  color: white;
-}
-.header-cairo .header-info .overlay .buttons-container {
-  position: absolute;
-  bottom: 40px;
-}
-.header-cairo .header-info .overlay .buttons-container .btn {
-  font-weight: bold;
-}
-.header-cairo .header-details {
-  border: 1px solid rgb(82, 82, 15);
-  border-radius: 5px;
-  padding: 15px;
-}
-.header-cairo .header-details p {
-  font-size: 18px;
-  text-align: justify;
-  color: rgb(82, 82, 15);
-}
-
-.cairo-description .description-title {
-  text-align: center;
-}
-.cairo-description .description-title h1 {
-  font-size: 22px;
-  font-weight: bold;
-  text-align: center;
-  color: rgb(82, 82, 15);
-  padding-top: 30px;
-  padding-bottom: 20px;
-}
-.cairo-description .description-details {
-  border: 1px solid rgb(82, 82, 15);
-  border-radius: 5px;
-  padding: 15px;
-}
-.cairo-description .description-details p {
-  font-size: 18px;
-  text-align: justify;
-  color: rgb(82, 82, 15);
-}
-
-.cairo-gallery .gallery-title {
-  text-align: center;
-}
-.cairo-gallery .gallery-title h1 {
-  font-size: 22px;
-  font-weight: bold;
-  text-align: center;
-  color: rgb(82, 82, 15);
-  padding-top: 30px;
-  padding-bottom: 20px;
-}
-.cairo-gallery .gallery-details .thumb {
-  margin-top: 15px;
-  margin-bottom: 15px;
-}
-.cairo-gallery .gallery-details .thumb .img-thumbnail {
+.header-info--cairo {
+  background-image: url(./images/journey-cairo.jpg) !important;
   border: 1px solid rgb(82, 82, 15) !important;
 }
-.cairo-gallery .gallery-details .modal-content {
-  width: 70% !important;
-  border: 2px solid rgb(82, 82, 15) !important;
-}
-.cairo-gallery .gallery-details .modal-content .modal-header {
-  justify-content: space-between;
-}
-.cairo-gallery .gallery-details .modal-content .modal-header h4 {
-  color: rgb(82, 82, 15);
-}
-.cairo-gallery .gallery-details .modal-content .modal-header button.close {
-  border: none;
-  background-color: transparent;
-}
-.cairo-gallery .gallery-details .modal-content .modal-header button.close span {
-  color: rgb(82, 82, 15);
-  font-size: 20px;
-  font-weight: bold;
-}
-.cairo-gallery .gallery-details .modal-content .modal-footer {
-  display: block !important;
-}
-.cairo-gallery .gallery-details .modal-content .modal-footer button {
-  background-color: rgb(82, 82, 15);
-}
-
-.header-istanbul .header-info {
+.header-info {
   background-image: url(./images/journey-istanbul.jpg);
   background-size: cover;
   background-position: center;
@@ -124,7 +15,11 @@
   border: 1px solid #6594c5;
   border-radius: 5px;
 }
-.header-istanbul .header-info .overlay {
+.header-info .overlay--cairo {
+  background-color: rgb(82, 82, 15) !important;
+  opacity: 0.7 !important;
+}
+.header-info .overlay {
   background-color: rgba(101, 148, 197, 0.5);
   position: absolute;
   top: 0;
@@ -136,37 +31,45 @@
   align-items: center;
   flex-direction: column;
 }
-.header-istanbul .header-info .overlay h1 {
+.header-info .overlay h1 {
   font-size: 22px;
   font-weight: bold;
   text-align: center;
   position: relative;
   color: white;
 }
-.header-istanbul .header-info .overlay .buttons-container {
+.header-info .overlay .buttons-container {
   position: absolute;
   bottom: 40px;
 }
-.header-istanbul .header-info .overlay .buttons-container .btn {
+.header-info .overlay .buttons-container .btn {
   font-weight: bold;
+}
+.header-info .overlay .buttons-container .btn--istanbul {
   background-color: #6594c5;
   color: white;
 }
-.header-istanbul .header-details {
+.header-details {
   border: 1px solid #6594c5;
   border-radius: 5px;
   padding: 15px;
 }
-.header-istanbul .header-details p {
+.header-details p {
   font-size: 18px;
   text-align: justify;
   color: #6594c5;
 }
+.header-details--cairo {
+  border: 1px solid rgb(82, 82, 15) !important;
+}
+.header-details--cairo p {
+  color: rgb(82, 82, 15) !important;
+}
 
-.istanbul-description .description-title {
+.description-title {
   text-align: center;
 }
-.istanbul-description .description-title h1 {
+.description-title h1 {
   font-size: 22px;
   font-weight: bold;
   text-align: center;
@@ -174,21 +77,30 @@
   padding-top: 30px;
   padding-bottom: 20px;
 }
-.istanbul-description .description-details {
+.description-title--cairo h1 {
+  color: rgb(82, 82, 15);
+}
+.description-details {
   border: 1px solid #6594c5;
   border-radius: 5px;
   padding: 15px;
 }
-.istanbul-description .description-details p {
+.description-details p {
   font-size: 18px;
   text-align: justify;
   color: #6594c5;
 }
+.description-details--cairo {
+  border: 1px solid rgb(82, 82, 15);
+}
+.description-details--cairo p {
+  color: rgb(82, 82, 15);
+}
 
-.istanbul-gallery .gallery-title {
+.gallery-title {
   text-align: center;
 }
-.istanbul-gallery .gallery-title h1 {
+.gallery-title h1 {
   font-size: 22px;
   font-weight: bold;
   text-align: center;
@@ -196,21 +108,24 @@
   padding-top: 30px;
   padding-bottom: 20px;
 }
-.istanbul-gallery .gallery-details .thumb {
+.gallery-title--cairo h1 {
+  color: rgb(82, 82, 15);
+}
+.gallery-details .thumb {
   margin-top: 15px;
   margin-bottom: 15px;
 }
-.istanbul-gallery .gallery-details .thumb .thumbnail {
+.gallery-details .thumb .thumbnail {
   width: 100%;
   overflow: hidden;
   position: relative;
 }
-.istanbul-gallery .gallery-details .thumb .thumbnail::before {
+.gallery-details .thumb .thumbnail::before {
   content: "";
   display: block;
   padding-top: 70%;
 }
-.istanbul-gallery .gallery-details .thumb .thumbnail .img-thumbnail {
+.gallery-details .thumb .thumbnail .img-thumbnail {
   border: 1px solid #6594c5 !important;
   position: absolute;
   top: 0;
@@ -219,21 +134,24 @@
   height: 100%;
   object-fit: cover;
 }
-.istanbul-gallery .gallery-details .modal-content {
+.gallery-details .thumb .thumbnail .img-thumbnail--cairo {
+  border: 1px solid rgb(82, 82, 15) !important;
+}
+.gallery-details .modal-content {
   border: 2px solid #6594c5 !important;
   width: 70% !important;
 }
-.istanbul-gallery .gallery-details .modal-content .modal-body {
+.gallery-details .modal-content .modal-body {
   overflow: hidden;
   position: relative;
 }
-.istanbul-gallery .gallery-details .modal-content .modal-body::before {
+.gallery-details .modal-content .modal-body::before {
   content: "";
   width: 100%;
   display: block;
   padding-top: 70%;
 }
-.istanbul-gallery .gallery-details .modal-content .modal-body img {
+.gallery-details .modal-content .modal-body img {
   position: absolute;
   top: 0;
   right: 0;
@@ -241,26 +159,41 @@
   height: 100%;
   object-fit: cover;
 }
-.istanbul-gallery .gallery-details .modal-content .modal-header {
+.gallery-details .modal-content .modal-header {
   justify-content: space-between;
 }
-.istanbul-gallery .gallery-details .modal-content .modal-header h4 {
+.gallery-details .modal-content .modal-header h4 {
   color: #6594c5;
 }
-.istanbul-gallery .gallery-details .modal-content .modal-header button.close {
+.gallery-details .modal-content .modal-header button.close {
   border: none;
   background-color: transparent;
 }
-.istanbul-gallery .gallery-details .modal-content .modal-header button.close span {
+.gallery-details .modal-content .modal-header button.close span {
   color: #6594c5;
   font-size: 20px;
   font-weight: bold;
 }
-.istanbul-gallery .gallery-details .modal-content .modal-footer {
+.gallery-details .modal-content .modal-footer {
   display: block !important;
 }
-.istanbul-gallery .gallery-details .modal-content .modal-footer button {
+.gallery-details .modal-content .modal-footer button {
   background-color: #6594c5;
+}
+.gallery-details .modal-content--cairo {
+  border: 2px solid rgb(82, 82, 15) !important;
+}
+.gallery-details .modal-content--cairo .modal-header {
+  justify-content: space-between;
+}
+.gallery-details .modal-content--cairo .modal-header h4 {
+  color: rgb(82, 82, 15);
+}
+.gallery-details .modal-content--cairo .modal-header button.close span {
+  color: rgb(82, 82, 15);
+}
+.gallery-details .modal-content--cairo .modal-footer button {
+  background-color: rgb(82, 82, 15);
 }
 
 .sign .form-border {
@@ -293,6 +226,11 @@
 }
 .sign .form-border a p:hover {
   color: #6e2e5f;
+}
+
+.form-control:focus {
+  border-color: rgb(180, 78, 157) !important;
+  box-shadow: 0px 0px 5px rgb(180, 78, 157) !important;
 }
 
 @font-face {
@@ -468,10 +406,16 @@
   font-size: 18px;
   text-align: justify;
 }
-.contact-us-info .map iframe {
-  width: 100%;
+.contact-us-info .iframe-container {
+  overflow: hidden;
+  display: flex;
   border: 1px solid rgb(180, 78, 157);
   border-radius: 5px;
+}
+.contact-us-info .iframe-container iframe {
+  height: calc(100% + 4px);
+  min-width: calc(100% + 4px);
+  margin: -2px;
 }
 
 .footer .copy-rights {

@@ -1,0 +1,208 @@
+.header {
+  &-info--cairo {
+    background-image: url(../assets/images/journey-cairo.jpg) !important;
+    border: 1px solid $cairo-color !important;
+  }
+  &-info {
+    background-image: url(../assets/images/journey-istanbul.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 500px;
+    position: relative;
+    border: 1px solid $istanbul-color;
+    border-radius: 5px;
+
+    .overlay--cairo {
+      background-color: $cairo-color !important;
+      opacity: 0.7 !important;
+    }
+    .overlay {
+      background-color: rgba($color: $istanbul-color, $alpha: 0.5);
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+
+      h1 {
+        @include title;
+        position: relative;
+        color: white;
+      }
+      .buttons-container {
+        position: absolute;
+        bottom: 40px;
+
+        .btn {
+          font-weight: bold;
+        }
+        .btn--istanbul {
+          background-color: $istanbul-color;
+          color: white;
+        }
+      }
+    }
+  }
+  &-details {
+    border: 1px solid $istanbul-color;
+    border-radius: 5px;
+    padding: 15px;
+    p {
+      @include paragragh;
+      color: $istanbul-color;
+    }
+  }
+  &-details--cairo {
+    border: 1px solid $cairo-color !important;
+    p {
+      color: $cairo-color !important;
+    }
+  }
+}
+
+.description {
+  &-title {
+    text-align: center;
+    h1 {
+      @include title;
+      color: $istanbul-color;
+      padding-top: 30px;
+      padding-bottom: 20px;
+    }
+  }
+  &-title--cairo {
+    h1 {
+      color: $cairo-color;
+    }
+  }
+  &-details {
+    border: 1px solid $istanbul-color;
+    border-radius: 5px;
+    padding: 15px;
+
+    p {
+      @include paragragh;
+      color: $istanbul-color;
+    }
+  }
+  &-details--cairo {
+    border: 1px solid $cairo-color;
+    p {
+      color: $cairo-color;
+    }
+  }
+}
+.gallery {
+  &-title {
+    text-align: center;
+    h1 {
+      @include title;
+      color: $istanbul-color;
+      padding-top: 30px;
+      padding-bottom: 20px;
+    }
+  }
+  &-title--cairo {
+    h1 {
+      color: $cairo-color;
+    }
+  }
+  &-details {
+    .thumb {
+      margin-top: 15px;
+      margin-bottom: 15px;
+
+      .thumbnail {
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+        &::before {
+          content: "";
+          display: block;
+          padding-top: 70%;
+        }
+
+        .img-thumbnail {
+          border: 1px solid $istanbul-color !important ;
+          position: absolute;
+          top: 0;
+          right: 0;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+        .img-thumbnail--cairo {
+          border: 1px solid $cairo-color !important;
+        }
+      }
+    }
+    .modal-content {
+      border: 2px solid $istanbul-color !important;
+      width: 70% !important;
+      .modal-body {
+        overflow: hidden;
+        position: relative;
+        &::before {
+          content: "";
+          width: 100%;
+          display: block;
+          padding-top: 70%;
+        }
+        img {
+          position: absolute;
+          top: 0;
+          right: 0;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+
+      .modal-header {
+        justify-content: space-between;
+        h4 {
+          color: $istanbul-color;
+        }
+        button.close {
+          border: none;
+          background-color: transparent;
+          span {
+            color: $istanbul-color;
+            font-size: 20px;
+            font-weight: bold;
+          }
+        }
+      }
+      .modal-footer {
+        display: block !important;
+        button {
+          background-color: $istanbul-color;
+        }
+      }
+    }
+    .modal-content--cairo {
+      border: 2px solid $cairo-color !important;
+      .modal-header {
+        justify-content: space-between;
+        h4 {
+          color: $cairo-color;
+        }
+        button.close { 
+          span {
+            color: $cairo-color;
+          }
+        }
+      }
+      .modal-footer {
+        button {
+          background-color: $cairo-color;
+        }
+      }
+    }
+  }
+}

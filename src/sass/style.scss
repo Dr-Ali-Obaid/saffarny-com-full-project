@@ -1,8 +1,7 @@
 @import "./variables.scss";
-@import "./journey-1.scss";
-@import "./journey-2.scss";
-@import "./sign-up.scss";
-@import "./sign-in.scss";
+@import "./journeys.scss";
+@import "./sign.scss";
+
 
 @font-face {
   font-family: tajwal;
@@ -173,11 +172,15 @@
         @include paragragh;
       }
     }
-    .map {
+    .iframe-container {
+      overflow: hidden;
+      display: flex;
+      border: 1px solid $main-color;
+      border-radius: 5px;
       iframe {
-        width: 100%;
-        border: 1px solid $main-color;
-        border-radius: 5px;
+        height: calc(100% + 4px);
+        min-width: calc(100% + 4px);
+        margin: -2px;
       }
     }
   }
@@ -223,3 +226,4 @@
     }
   }
 }
+
