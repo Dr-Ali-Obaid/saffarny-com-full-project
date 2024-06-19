@@ -3,12 +3,10 @@
   "version": "1.0.0",
   "description": "torism company",
   "main": "main.js",
-  
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "webpack-dev-server --mode development",
     "dist": "webpack-dev-server --mode production"
-   
   },
   "keywords": [
     "saffarny",
@@ -18,11 +16,18 @@
   "author": "Ali Obaid",
   "license": "ISC",
   "devDependencies": {
+    "@babel/core": "^7.24.7",
+    "@babel/preset-env": "^7.24.7",
+    "babel-loader": "^9.1.3",
     "clean-webpack-plugin": "^4.0.0",
     "css-loader": "^7.1.2",
+    "css-minimizer-webpack-plugin": "^7.0.0",
     "html-loader": "^5.0.0",
     "html-webpack-plugin": "^5.6.0",
     "mini-css-extract-plugin": "^2.9.0",
+    "postcss": "^8.4.38",
+    "postcss-loader": "^8.1.1",
+    "postcss-preset-env": "^9.5.14",
     "sass": "^1.77.5",
     "sass-loader": "^14.2.1",
     "webpack": "^5.92.0",
@@ -33,6 +38,7 @@
     "@fortawesome/fontawesome-free": "^6.5.2",
     "@popperjs/core": "^2.11.8",
     "bootstrap": "^5.3.3",
-    "jquery": "^3.7.1"
+    "jquery": "^3.7.1",
+    "normalize.css": "^8.0.1"
   }
 }

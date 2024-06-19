@@ -1,4 +1,5 @@
 import "../sass/style.scss";
+import "normalize.css";
 import "@fortawesome/fontawesome-free/js/all.min.js";
 import "bootstrap/dist/css/bootstrap.rtl.min.css";
 import "@popperjs/core/lib/popper.js";

@@ -1,6 +1,8 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
+
 
 module.exports = {
   entry: {
@@ -23,8 +25,21 @@ module.exports = {
 
   stats: "errors-only",
 
+
+
   module: {
     rules: [
+      {
+        test:/\.m?js$/,
+        exclude:/node_modules/,
+        use:{
+          loader:"babel-loader",
+          options:{
+            presets:['@babel/preset-env']
+          }
+        }
+      },
+
       {
         test: /\.(sass|css|scss)$/,
         use: [
@@ -32,6 +47,8 @@ module.exports = {
           MiniCssExtractPlugin.loader,
           // Translates CSS into CommonJS
           "css-loader",
+
+          "postcss-loader",
           // Compiles Sass to CSS
           "sass-loader",
         ],
@@ -74,6 +91,16 @@ module.exports = {
     open: true,
   },
 
+  optimization: {
+    minimize: true,
+    minimizer: [
+      // For webpack@5 you can use the `...` syntax to extend existing minimizers (i.e. `terser-webpack-plugin`), uncomment the next line
+      // but if i uncomment it, it produce txt files for every js file beside it in product folder
+      // `...`,
+      new CssMinimizerPlugin(),
+    ],
+  }, 
+  
   plugins: [
     new HtmlWebpackPlugin({
       template: "./src/index.html",
@@ -105,5 +132,6 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: "style.css",
     }),
+
   ],
 };

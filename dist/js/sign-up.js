@@ -20,6 +20,16 @@ eval("\n\nmodule.exports = ansiHTML\n\n// Reference to https://github.com/sindre
 
 /***/ }),
 
+/***/ "./src/js/sign-up.js":
+/*!***************************!*\
+  !*** ./src/js/sign-up.js ***!
+  \***************************/
+/***/ (() => {
+
+eval("document.getElementById(\"second-password\").addEventListener(\"keyup\", function () {\n  var firstPassword = document.getElementById(\"first-password\").value;\n  var secondPassword = document.getElementById(\"second-password\").value;\n  if (firstPassword !== secondPassword) {\n    document.getElementById(\"error-message\").innerText = \"كلمة المرور غير متطابقة\";\n  } else {\n    document.getElementById(\"error-message\").innerText = \"\";\n  }\n});\ndocument.getElementById(\"form\").addEventListener(\"submit\", function (event) {\n  var firstPassword = document.getElementById(\"first-password\").value;\n  var secondPassword = document.getElementById(\"second-password\").value;\n  if (firstPassword !== secondPassword) {\n    event.preventDefault();\n  }\n});\n\n//# sourceURL=webpack://saffarny-com/./src/js/sign-up.js?");
+
+/***/ }),
+
 /***/ "./node_modules/events/events.js":
 /*!***************************************!*\
   !*** ./node_modules/events/events.js ***!
@@ -288,16 +298,6 @@ eval("/*\n\tMIT License http://www.opensource.org/licenses/mit-license.php\n\tAu
 
 eval("/** @typedef {\"info\" | \"warning\" | \"error\"} LogLevel */\n\n/** @type {LogLevel} */\nvar logLevel = \"info\";\n\nfunction dummy() {}\n\n/**\n * @param {LogLevel} level log level\n * @returns {boolean} true, if should log\n */\nfunction shouldLog(level) {\n\tvar shouldLog =\n\t\t(logLevel === \"info\" && level === \"info\") ||\n\t\t([\"info\", \"warning\"].indexOf(logLevel) >= 0 && level === \"warning\") ||\n\t\t([\"info\", \"warning\", \"error\"].indexOf(logLevel) >= 0 && level === \"error\");\n\treturn shouldLog;\n}\n\n/**\n * @param {(msg?: string) => void} logFn log function\n * @returns {(level: LogLevel, msg?: string) => void} function that logs when log level is sufficient\n */\nfunction logGroup(logFn) {\n\treturn function (level, msg) {\n\t\tif (shouldLog(level)) {\n\t\t\tlogFn(msg);\n\t\t}\n\t};\n}\n\n/**\n * @param {LogLevel} level log level\n * @param {string|Error} msg message\n */\nmodule.exports = function (level, msg) {\n\tif (shouldLog(level)) {\n\t\tif (level === \"info\") {\n\t\t\tconsole.log(msg);\n\t\t} else if (level === \"warning\") {\n\t\t\tconsole.warn(msg);\n\t\t} else if (level === \"error\") {\n\t\t\tconsole.error(msg);\n\t\t}\n\t}\n};\n\nvar group = console.group || dummy;\nvar groupCollapsed = console.groupCollapsed || dummy;\nvar groupEnd = console.groupEnd || dummy;\n\nmodule.exports.group = logGroup(group);\n\nmodule.exports.groupCollapsed = logGroup(groupCollapsed);\n\nmodule.exports.groupEnd = logGroup(groupEnd);\n\n/**\n * @param {LogLevel} level log level\n */\nmodule.exports.setLogLevel = function (level) {\n\tlogLevel = level;\n};\n\n/**\n * @param {Error} err error\n * @returns {string} formatted error\n */\nmodule.exports.formatError = function (err) {\n\tvar message = err.message;\n\tvar stack = err.stack;\n\tif (!stack) {\n\t\treturn message;\n\t} else if (stack.indexOf(message) < 0) {\n\t\treturn message + \"\\n\" + stack;\n\t} else {\n\t\treturn stack;\n\t}\n};\n\n\n//# sourceURL=webpack://saffarny-com/./node_modules/webpack/hot/log.js?");
 
-/***/ }),
-
-/***/ "./src/js/sign-up.js":
-/*!***************************!*\
-  !*** ./src/js/sign-up.js ***!
-  \***************************/
-/***/ (() => {
-
-eval("\r\n  document.getElementById(\"second-password\").addEventListener(\"keyup\", function() {\r\n  let firstPassword = document.getElementById(\"first-password\").value;\r\n  let secondPassword = document.getElementById(\"second-password\").value;\r\n    if (firstPassword !== secondPassword) {\r\n      document.getElementById(\"error-message\").innerText =\r\n        \"كلمة المرور غير متطابقة\";  \r\n    }\r\n    else{\r\n      document.getElementById(\"error-message\").innerText =\"\"\r\n    }\r\n  });\r\ndocument.getElementById(\"form\").addEventListener(\"submit\", function (event) {\r\n  let firstPassword = document.getElementById(\"first-password\").value;\r\n  let secondPassword = document.getElementById(\"second-password\").value;\r\n\r\n  if (firstPassword !== secondPassword) {\r\n   \r\n    event.preventDefault();   \r\n  }\r\n});\r\n\n\n//# sourceURL=webpack://saffarny-com/./src/js/sign-up.js?");
-
 /***/ })
 
 /******/ 	});
@@ -388,7 +388,7 @@ eval("\r\n  document.getElementById(\"second-password\").addEventListener(\"keyu
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	(() => {
-/******/ 		__webpack_require__.h = () => ("80472543e9e964eb7f4a")
+/******/ 		__webpack_require__.h = () => ("4b73aaf36a8d87dd80b0")
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/global */
