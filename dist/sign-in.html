@@ -3,9 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="سفرني للسياحة">
+    <meta name="description" content="سفرني للسياحة" />
     <title>سفرني للسياحة | تسجيل الدخول</title>
-  
   <script defer src="/js/main.js"></script><link href="style.css" rel="stylesheet"></head>
   <body>
     <div class="container">
@@ -23,7 +22,7 @@
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span class="navbar-toggler-icon"></span>
+        <i class="fa-solid fa-bars"></i>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
@@ -40,56 +39,102 @@
         </div>
       </nav>
       <section class="sign mt-5">
-        <form action="sign-in.html" onsubmit="return passwordMatch()" >
+        <form action="sign-in.html">
           <div class="row">
             <div class="col-md-6 offset-md-3 mb-5 form-border">
               <div class="form-header mb-5"></div>
-              <div class="mb-3 px-3">               
-                    <label for="email" class="form-label">البريد الإلكتروني</label>
-                    <input
-                      type="email"
-                      class="form-control"
-                      id="email"
-                      name="email"
-                      placeholder="البريد الإلكتروني"
-                      required
-                    />            
+              <div class="mb-3 px-3">
+                <label for="email" class="form-label">البريد الإلكتروني</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  name="email"
+                  placeholder="البريد الإلكتروني"
+                  required
+                />
               </div>
               <div class="mb-5 px-3">
-                
-                    <label for="password" class="form-label">كلمة المرور</label>
-                    <input
-                      type="password"
-                      class="form-control"
-                      id="password"
-                      placeholder="كلمة المرور"
-                      required
-                    />
-                  </div>
+                <label for="password" class="form-label">كلمة المرور</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  id="password"
+                  placeholder="كلمة المرور"
+                  required
+                />
+              </div>
               <div class="row mb-3 px-3">
-                <div class="col-md-6">
-                   <button type="submit" class="btn custom-btn">تسجيل الدخول</button>            
-                  </div>
-                  <div class="col-md-6">
-                    <a href="#">
-                        <p>
-                            هل نسيت كلمة المرور؟
-                        </p>
-                    </a>
-                  </div>
+                <div class="col-md-6 first-element">
+                  <button type="submit" class="btn custom-btn">
+                    تسجيل الدخول
+                  </button>
+                </div>
+                <div class="col-md-6 text-container">
+                  <p data-bs-target="#exampleModal" data-bs-toggle="modal">
+                    هل نسيت كلمة المرور؟
+                  </p>
+                </div>
               </div>
               <div class="form-footer"></div>
             </div>
           </div>
         </form>
       </section>
+      <section class="forgotten-password">
+        <div
+          class="modal fade"
+          id="exampleModal"
+          tabindex="-1"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">
+                  نسيت كلمة المرور
+                </h1>
+                <a href="#" data-bs-dismiss="modal">
+                  <i class="fa-solid fa-xmark"></i>
+                </a>
+              </div>
+              <form>
+                <div class="modal-body">
+                  <div class="mb-3">
+                    <label for="recipient-email" class="col-form-label"
+                      >البريد الإلكتروني:</label
+                    >
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="recipient-email"
+                      placeholder="البريد الإلكتروني"
+                      required
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <p>
+                      الرجاء إدخال عنوان البريد الإلكتروني في الحقل أعلاه. سنرسل
+                      لك رابط لتتمكن من الوصول إلى المزيد من التعليمات .
+                    </p>
+                  </div>
+                  <div class="mb-3"></div>
+                </div>
+                <div class="modal-footer">
+                  <button type="submit" class="btn custom-btn">إرسال</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section class="footer my-3">
         <div class="copy-rights">
           <p>جميع الحقوق محفوظة شركة سفرني &copy;<span id="date"></span></p>
         </div>
       </section>
     </div>
-
-    
   </body>
 </html>

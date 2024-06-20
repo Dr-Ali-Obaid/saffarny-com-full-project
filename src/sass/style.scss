@@ -41,6 +41,16 @@
       }
     }
   }
+  &-toggler{
+    &:focus{
+      box-shadow: none !important;
+    }
+    
+    svg{
+      color: $main-color;
+      font-size: 22px;
+    }
+  }
 }
 
 .custom-btn {
@@ -206,6 +216,9 @@
   }
 }
 @media (max-width: 992px) {
+  .navbar{
+    margin-top: 20px;
+  }
   .services-types {
     .service-card {
       &-description {
@@ -215,6 +228,31 @@
         p {
           font-size: 14px;
         }
+      }
+    }
+  }
+  .journeys{
+    &-description {
+      .card {
+        
+        &-title {
+          font-size: 18px
+          
+        }
+        &-text {
+          font-size: 14px;
+        }
+        .custom-btn {  
+          width: 100px;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+  .contact-us{
+    &-info{
+      ul{
+        padding: 0;
       }
     }
   }
