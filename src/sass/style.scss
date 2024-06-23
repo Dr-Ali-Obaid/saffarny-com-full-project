@@ -2,7 +2,6 @@
 @import "./journeys.scss";
 @import "./sign.scss";
 
-
 @font-face {
   font-family: tajwal;
   src: url(../assets/fonts/Tajawal-Regular.ttf);
@@ -36,17 +35,24 @@
     .nav-link {
       font-size: 20px;
       font-weight: bold;
+      transition: all 0.5s ease;
+      &:hover:not(.active) {
+        color: $darken-main-color;
+        text-decoration: underline;
+        
+      
+      }
       &.active {
         color: $main-color;
       }
     }
   }
-  &-toggler{
-    &:focus{
+  &-toggler {
+    &:focus {
       box-shadow: none !important;
     }
-    
-    svg{
+
+    svg {
       color: $main-color;
       font-size: 22px;
     }
@@ -56,7 +62,7 @@
 .custom-btn {
   background-color: $main-color !important;
   color: white !important;
-  width: 130px !important; 
+  width: 130px !important;
   transition: all 0.5s ease !important;
   &:not(:last-child) {
     margin-left: 10px !important;
@@ -67,26 +73,25 @@
   }
 }
 
-.header-title{
+.header-title {
   width: 100%;
-  
+
   color: white;
   background: linear-gradient(to top, $darken-main-color, $main-color);
   padding: 15px;
   margin: 20px 0;
   border-radius: 5px;
   text-align: center;
-  
+
   h1 {
     @include title;
-   
   }
 }
-.header-details{
+.header-details {
   padding: 15px;
   margin: 20px 0;
   border: 1px solid $main-color;
-  
+
   border-radius: 5px;
   p {
     @include paragragh;
@@ -216,7 +221,7 @@
   }
 }
 @media (max-width: 992px) {
-  .navbar{
+  .navbar {
     margin-top: 20px;
   }
   .services-types {
@@ -231,27 +236,25 @@
       }
     }
   }
-  .journeys{
+  .journeys {
     &-description {
       .card {
-        
         &-title {
-          font-size: 18px
-          
+          font-size: 18px;
         }
         &-text {
           font-size: 14px;
         }
-        .custom-btn {  
+        .custom-btn {
           width: 100px;
           font-size: 14px;
         }
       }
     }
   }
-  .contact-us{
-    &-info{
-      ul{
+  .contact-us {
+    &-info {
+      ul {
         padding: 0;
       }
     }
@@ -264,4 +267,3 @@
     }
   }
 }
-

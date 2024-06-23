@@ -70,13 +70,16 @@ input[type="email"]::placeholder {
   }
 }
 
+@media (max-width: 768px) {
+  form {
+    .first-element {
+      margin-bottom: 16px;
+    }
+  }
+}
 @media (max-width: 576px) {
   form {
     width: 90%;
     margin: auto;
-
-    .first-element {
-      margin-bottom: 16px;
-    }
   }
 }
