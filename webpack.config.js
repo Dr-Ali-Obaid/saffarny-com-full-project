@@ -2,13 +2,14 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
+const ImageMinimizerPlugin = require("image-minimizer-webpack-plugin");
 
 
 module.exports = {
   entry: {
-    "/js/main": ["./src/js/main.js", "jquery"],
-    "/js/journeys": ["./src/js/journeys.js", "jquery"],
-    "/js/sign-up": ["./src/js/sign-up.js"],
+    "js/main": ["./src/js/main.js", "jquery"],
+    "js/journeys": ["./src/js/journeys.js", "jquery"],
+    "js/sign-up": ["./src/js/sign-up.js"],
   },
 
   output: {
@@ -75,6 +76,9 @@ module.exports = {
       {
         test: /\.html$/i,
         loader: "html-loader",
+        options: {
+          minimize: true,
+        },
       },
     ],
   },
@@ -95,9 +99,26 @@ module.exports = {
     minimize: true,
     minimizer: [
       // For webpack@5 you can use the `...` syntax to extend existing minimizers (i.e. `terser-webpack-plugin`), uncomment the next line
-      // but if i uncomment it, it produce txt files for every js file beside it in product folder
-      // `...`,
+      `...`,
+
       new CssMinimizerPlugin(),
+
+      new ImageMinimizerPlugin({
+        minimizer: {
+          implementation: ImageMinimizerPlugin.sharpMinify,
+          options: {
+            encodeOptions: {
+              jpeg: {
+                quality: 60,
+              },
+              png: {
+                quality: 60,
+              }
+            },
+          },
+        },
+      }),
+
     ],
   }, 
   
@@ -105,32 +126,31 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: "./src/index.html",
       filename: "index.html",
-      chunks: ["/js/main"],
+      chunks: ["js/main"],
     }),
     new HtmlWebpackPlugin({
       template: "./src/journey-1.html",
       filename: "journey-1.html",
-      chunks: ["/js/main", "/js/journeys"],
+      chunks: ["js/main", "js/journeys"],
     }),
     new HtmlWebpackPlugin({
       template: "./src/journey-2.html",
       filename: "journey-2.html",
-      chunks: ["/js/main", "/js/journeys"],
+      chunks: ["js/main", "js/journeys"],
     }),
     new HtmlWebpackPlugin({
       template: "./src/sign-in.html",
       filename: "sign-in.html",
-      chunks: ["/js/main"],
+      chunks: ["js/main"],
     }),
     new HtmlWebpackPlugin({
       template: "./src/sign-up.html",
       filename: "sign-up.html",
-      chunks: ["/js/main", "/js/sign-up"],
-      inject: "body",
+      chunks: ["js/main", "js/sign-up"],
     }),
 
     new MiniCssExtractPlugin({
-      filename: "style.css",
+      filename: "css/style.css",
     }),
 
   ],
