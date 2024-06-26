@@ -1,5 +1,7 @@
 @import "./variables.scss";
-@import "./journeys.scss";
+@import "./mixins";
+@import "./journey-cairo.scss";
+@import "./journey-istanbul.scss";
 @import "./sign.scss";
 
 @font-face {
@@ -42,6 +44,7 @@
       }
       &.active {
         color: $main-color;
+        background-color: transparent !important;
       }
     }
   }
@@ -249,6 +252,14 @@
 @media (max-width: 992px) {
   .navbar {
     margin-top: 20px;
+    .dropdown {
+      margin-bottom: 15px;
+      &-menu {
+        border: none;
+        background-color: transparent;
+        padding: 0 10px 15px 0px;
+      }
+    }
   }
   .services-types {
     .service-card {
@@ -278,7 +289,6 @@
       }
     }
   }
-
 }
 @media (max-width: 768px) {
   .journeys-description {

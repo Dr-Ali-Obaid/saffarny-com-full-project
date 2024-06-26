@@ -129,13 +129,13 @@ module.exports = {
       chunks: ["js/main"],
     }),
     new HtmlWebpackPlugin({
-      template: "./src/journey-1.html",
-      filename: "journey-1.html",
+      template: "./src/journey-cairo.html",
+      filename: "journey-cairo.html",
       chunks: ["js/main", "js/journeys"],
     }),
     new HtmlWebpackPlugin({
-      template: "./src/journey-2.html",
-      filename: "journey-2.html",
+      template: "./src/journey-istanbul.html",
+      filename: "journey-istanbul.html",
       chunks: ["js/main", "js/journeys"],
     }),
     new HtmlWebpackPlugin({

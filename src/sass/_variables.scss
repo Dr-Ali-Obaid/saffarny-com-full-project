@@ -1,14 +1,9 @@
 $main-color: rgb(180, 78, 157);
 $darken-main-color: darken($main-color, 20%);
 $lighten-main-color: lighten($main-color, 10%);
-$cairo-color: rgb(82, 82, 15);
+$cairo-color: rgb(162, 91, 37);
 $istanbul-color:#6594c5;
-@mixin title(){
-font-size: 22px;
-font-weight: bold;
-text-align: center
-};
-@mixin paragragh(){
-font-size: 18px;
-text-align: justify;
-}
+$cairo-image: url(../images/journey-cairo.jpg);
+$istanbul-image: url(../images/journey-istanbul.jpg);
+
+

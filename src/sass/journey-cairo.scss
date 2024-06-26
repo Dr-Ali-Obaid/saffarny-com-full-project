@@ -1,0 +1,5 @@
+.main-cairo{
+    @include journey-header ($cairo-color, $cairo-image);
+    @include journey-descripion($cairo-color);
+    @include journey-gallery ($cairo-color) 
+}

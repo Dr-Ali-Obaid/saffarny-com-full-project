@@ -1,0 +1,5 @@
+.main-istanbul {
+  @include journey-header($istanbul-color, $istanbul-image);
+  @include journey-descripion($istanbul-color);
+  @include journey-gallery($istanbul-color);
+}
