@@ -8,7 +8,7 @@
   </head>
   <body>
     <div class="container">
-      <nav class="navbar navbar-expand-lg">
+      <nav class="navbar navbar-expand-lg mb-5">
         <a class="navbar-brand" href="#">
           <img src="images/lpgo.png" alt="" />
           سفرني
@@ -44,21 +44,38 @@
           </div>
         </div>
       </nav>
-      <section class="header">
-
-          <div class="header-title">
-            <h1 class="my-5">الشركة السياحية الأفضل في الوطن العربي</h1>
+      <section class="header mb-5">
+        <div id="carouselExampleIndicators" class="carousel slide">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
           </div>
-          <div class="header-details">
-            <p>
-              هدفنا مساعدتك وتيسير أمورك، لا تتردد بالتواصل معنا فنحن هنا
-              لنساعدك على إيجاد كل ما تحتاج له. إن كنت تبحث عن سكن أو جولة
-              سياحية لتقضي أفضل الأوقات فقد وجدت طلبك.
-            </p>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="images/carousel-1.jpg" class="d-block " alt="...">
+              <h1>الشركة السياحية الأفضل في الوطن العربي هدفنا مساعدتك وتيسير أمورك</h1>
+            </div>
+            <div class="carousel-item">
+              <img src="images/carousel-2.jpg" class="d-block " alt="...">
+              <h1>لا تتردد بالتواصل معنا فنحن هنا لنساعدك على إيجاد كل ما تحتاج له</h1>
+            </div>
+            <div class="carousel-item">
+              <img src="images/carousel-3.jpg" class="d-block " alt="...">
+              <h1>إن كنت تبحث عن سكن أو جولة سياحية لتقضي أفضل الأوقات فقد وجدت طلبك</h1>
+            </div>
           </div>
-        
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <i class="fa-solid fa-chevron-right"></i>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <i class="fa-solid fa-chevron-left"></i>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
       </section>
-      <section class="services my-3">
+      <section class="services myb-5">
         <div class="services-title">
           <h1>خدماتنا</h1>
         </div>
@@ -125,7 +142,7 @@
           </div>
         </div>
       </section>
-      <section class="journeys my-3" id="journeys">
+      <section class="journeys mb-5" id="journeys">
         <div class="journeys-title">
           <h1>الجولات السياحية</h1>
         </div>
@@ -166,7 +183,7 @@
           </div>
         </div>
       </section>
-      <section class="contact-us my-3" id="contact-us">
+      <section class="contact-us mb-5" id="contact-us">
         <div class="contact-us-title">
           <h1>تواصل معنا</h1>
         </div>
@@ -198,7 +215,7 @@
           </div>
         </div>
       </section>
-      <section class="footer my-3">
+      <section class="footer mb-3">
         <div class="copy-rights">
           <p>جميع الحقوق محفوظة شركة سفرني &copy;<span id="date"></span></p>
         </div>

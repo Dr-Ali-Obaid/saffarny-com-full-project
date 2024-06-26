@@ -39,8 +39,6 @@
       &:hover:not(.active) {
         color: $darken-main-color;
         text-decoration: underline;
-        
-      
       }
       &.active {
         color: $main-color;
@@ -73,36 +71,60 @@
   }
 }
 
-.header-title {
-  width: 100%;
+.header {
+  .carousel {
+    &-item {
+      height: 400px;
+      width: 100%;
+      text-align: center;
+      position: relative;
+      border: 1px solid $main-color;
+      border-radius: 5px;
+      &::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        right: 0;
+        background-color: rgba($color: $main-color, $alpha: 0.4);
+      }
 
-  color: white;
-  background: linear-gradient(to top, $darken-main-color, $main-color);
-  padding: 15px;
-  margin: 20px 0;
-  border-radius: 5px;
-  text-align: center;
+      img {
+        height: 100%;
+        width: 100%;
+      }
+      h1 {
+        position: absolute;
+        top: 45%;
+        bottom: 40%;
+        right: 10%;
+        left: 10%;
+        font-size: 20px;
+        font-weight: bold;
+        color: white;
+        z-index: 1;
+      }
+    }
+    &-control-prev,
+    &-control-next {
+      opacity: 1;
+      cursor: default !important;
 
-  h1 {
-    @include title;
+      svg {
+        font-size: 22px;
+        &:hover {
+          color: rgb(216, 206, 206);
+          cursor: pointer;
+        }
+      }
+    }
   }
 }
-.header-details {
-  padding: 15px;
-  margin: 20px 0;
-  border: 1px solid $main-color;
 
-  border-radius: 5px;
-  p {
-    @include paragragh;
-    font-weight: 600;
-    color: $main-color;
-    line-height: 30px;
-  }
-}
 .services {
   &-title {
-    margin: 30px;
+    margin-bottom: 30px;
     h1 {
       @include title;
       color: $main-color;
@@ -136,8 +158,11 @@
   }
 }
 .journeys {
+  background-color: rgba($color: $main-color, $alpha: 0.2);
+  border-radius: 5px;
+  padding: 20px;
   &-title {
-    margin: 30px;
+    margin-bottom: 30px;
     h1 {
       @include title;
       color: $main-color;
@@ -169,7 +194,7 @@
 }
 .contact-us {
   &-title {
-    margin: 30px;
+    margin-bottom: 30px;
     h1 {
       @include title;
       color: $main-color;
@@ -188,6 +213,7 @@
       }
     }
     .iframe-container {
+      margin-left: 2rem;
       overflow: hidden;
       display: flex;
       border: 1px solid $main-color;
@@ -252,18 +278,22 @@
       }
     }
   }
+
+}
+@media (max-width: 768px) {
+  .journeys-description {
+    .col-md-4:first-of-type {
+      margin-bottom: 20px !important;
+    }
+  }
   .contact-us {
     &-info {
       ul {
         padding: 0;
       }
     }
-  }
-}
-@media (max-width: 767px) {
-  .journeys-description {
-    .card {
-      margin-bottom: 20px;
+    .iframe-container {
+      margin-left: 0;
     }
   }
 }
